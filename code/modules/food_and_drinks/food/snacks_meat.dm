@@ -127,6 +127,16 @@
 	foodtype = MEAT | BREAKFAST
 	var/roasted = FALSE
 
+/obj/item/reagent_containers/food/snacks/blackpudding
+	name = "black pudding"
+	desc = "Bloody gorgeous."
+	icon_state = "blackpudding"
+	filling color = "#5B3330"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 2)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("sausage" = 1, "crumblyness" = 1, "savoryness" = 1)
+	foodtype = MEAT | BREAKFAST
+
 /obj/item/reagent_containers/food/snacks/sausage/Initialize(mapload)
 	. = ..()
 	eatverb = pick("bite","chew","nibble","gobble","chomp")
